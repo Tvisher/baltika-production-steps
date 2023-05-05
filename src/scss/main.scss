@@ -1,0 +1,308 @@
+@import "old.scss";
+
+.production-steps {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 59.4%;
+
+  .production-steps__inner {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .production-steps__svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .production-step {
+    position: absolute;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: filter 0.5s ease-in-out;
+      will-change: auto;
+    }
+
+    &:hover {
+      svg {
+        filter: drop-shadow(0px 1px 21px #ffd900);
+      }
+    }
+
+    &[data-step="1"] {
+      top: 19%;
+      left: 8.5%;
+      width: 6.8%;
+      height: 21.14%;
+    }
+
+    &[data-step="2"] {
+      top: 22%;
+      left: 18.5%;
+      width: 8.9%;
+      height: 17.2%;
+    }
+
+    &[data-step="3"] {
+      top: 21.5%;
+      left: 30%;
+      width: 8.9%;
+      height: 17.5%;
+    }
+
+    &[data-step="4"] {
+      top: 23%;
+      left: 46%;
+      width: 5.15%;
+      height: 15.7%;
+    }
+
+    &[data-step="5"] {
+      top: 42.7%;
+      left: 51.7%;
+      width: 6.2%;
+      height: 18.6%;
+    }
+
+    &[data-step="6"] {
+      top: 51%;
+      left: 40.3%;
+      width: 7.7%;
+      height: 13.8%;
+    }
+
+    &[data-step="7"] {
+      top: 51%;
+      left: 31.9%;
+      width: 3.65%;
+      height: 15.8%;
+    }
+
+    &[data-step="8"] {
+      top: 50%;
+      left: 23.4%;
+      width: 4.52%;
+      height: 8.24%;
+    }
+
+    &[data-step="9"] {
+      top: 57.3%;
+      left: 8.2%;
+      width: 11.85%;
+      height: 15.9%;
+    }
+
+    &[data-step="10"] {
+      top: 25%;
+      left: 66.3%;
+      width: 24.25%;
+      height: 41.7%;
+    }
+  }
+
+  .production-text {
+    position: absolute;
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    &[data-text="1"] {
+      left: 4.55%;
+      top: 12%;
+    }
+
+    &[data-text="2"] {
+      left: 17%;
+      top: 8%;
+    }
+
+    &[data-text="3"] {
+      left: 35%;
+      top: 8%;
+    }
+
+    &[data-text="4"] {
+      left: 57%;
+      top: 22%;
+    }
+
+    &[data-text="5"] {
+      left: 52.5%;
+      top: 62%;
+    }
+
+    &[data-text="6"] {
+      left: 37.7%;
+      top: 47.2%;
+    }
+
+    &[data-text="7"] {
+      left: 31%;
+      top: 68.5%;
+    }
+
+    &[data-text="8"] {
+      left: 21.5%;
+      top: 45%;
+    }
+
+    &[data-text="9"] {
+      left: 4.3%;
+      top: 59%;
+    }
+
+    &[data-text="10"] {
+      left: 66.3%;
+      top: 52.8%;
+    }
+  }
+}
+
+.ten-step-svg {
+  position: absolute;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &[data-step-svg="1"] {
+    width: 5.4%;
+    height: 13.85%;
+    top: 68.5%;
+    left: 65.5%;
+  }
+
+  &[data-step-svg="2"] {
+    width: 3.25%;
+    height: 11.29%;
+    top: 73%;
+    left: 71.3%;
+  }
+
+  &[data-step-svg="3"] {
+    width: 5.18%;
+    height: 12.54%;
+    top: 69.5%;
+    left: 74%;
+  }
+
+  &[data-step-svg="4"] {
+    width: 18.8%;
+    height: 31%;
+    top: 67%;
+    left: 76.7%;
+  }
+}
+
+.svg-logo {
+  position: absolute;
+  right: 4%;
+  top: 7%;
+  width: 26.59%;
+  height: 5%;
+}
+
+.step-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  padding: 20px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(0, 32, 70, 0.7);
+  .step-modal__content {
+    position: relative;
+    max-width: 74%;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    background-color: #fff;
+  }
+  .step-modal__wrapper {
+    display: flex;
+    gap: 6%;
+  }
+  .step-modal__title {
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 125%;
+    color: #012b62;
+    margin-bottom: 22px;
+  }
+
+  .step-modal__text {
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 154%;
+    text-align: justify;
+  }
+
+  .step-modal__image {
+    width: 38%;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .step-modal__close {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    top: 4.5%;
+    position: absolute;
+    right: 2%;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.973755 1.20312L19.4114 19.6407' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M19.4113 1.20312L0.97372 19.6407' stroke='black' stroke-width='1.32024'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .step-modal__music {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    top: 4%;
+    position: absolute;
+    right: 7.4%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 8.36784V7.40784C15 4.42784 12.93 3.28784 10.41 4.86784L7.49 6.69784C7.17 6.88784 6.8 6.99784 6.43 6.99784H5C3 6.99784 2 7.99784 2 9.99784V13.9978C2 15.9978 3 16.9978 5 16.9978H7' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M10.41 19.1292C12.93 20.7092 15 19.5592 15 16.5892V12.9492' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M18.81 9.41797C19.71 11.568 19.44 14.078 18 15.998' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M21.1501 7.80078C22.6201 11.2908 22.1801 15.3708 19.8301 18.5008' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M22 2L2 22' stroke='black' stroke-width='1.32024'/%3e%3c/svg%3e ");
+  }
+}
