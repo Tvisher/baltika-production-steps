@@ -30012,6 +30012,11 @@ button.swiper-pagination-bullet {
 
 .ten-step-svg {
   position: absolute;
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.ten-step-svg.anim {
+  transform: translate(-40px, -40px);
 }
 
 .ten-step-svg img {
@@ -30032,6 +30037,7 @@ button.swiper-pagination-bullet {
   height: 11.29%;
   top: 73%;
   left: 71.3%;
+  transition-duration: 1.8s;
 }
 
 .ten-step-svg[data-step-svg="3"] {
@@ -30039,6 +30045,7 @@ button.swiper-pagination-bullet {
   height: 12.54%;
   top: 69.5%;
   left: 74%;
+  transition-duration: 1.4s;
 }
 
 .ten-step-svg[data-step-svg="4"] {
@@ -30046,6 +30053,11 @@ button.swiper-pagination-bullet {
   height: 31%;
   top: 67%;
   left: 76.7%;
+}
+
+.ten-step-svg[data-step-svg="4"].anim {
+  transform: translate(100px, 100px);
+  opacity: 0;
 }
 
 .svg-logo {

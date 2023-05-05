@@ -181,7 +181,10 @@
 
 .ten-step-svg {
   position: absolute;
-
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+  &.anim{
+    transform:translate(-40px,-40px);
+  }
   img {
     width: 100%;
     height: 100%;
@@ -200,6 +203,7 @@
     height: 11.29%;
     top: 73%;
     left: 71.3%;
+    transition-duration: 1.8s;
   }
 
   &[data-step-svg="3"] {
@@ -207,6 +211,8 @@
     height: 12.54%;
     top: 69.5%;
     left: 74%;
+    transition-duration: 1.4s;
+
   }
 
   &[data-step-svg="4"] {
@@ -214,6 +220,10 @@
     height: 31%;
     top: 67%;
     left: 76.7%;
+    &.anim{
+        transform:translate(100px,100px);
+        opacity: 0;
+      }
   }
 }
 
