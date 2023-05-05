@@ -30011,6 +30011,7 @@ button.swiper-pagination-bullet {
 }
 
 .ten-step-svg {
+  transition: transform;
   position: absolute;
   transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
