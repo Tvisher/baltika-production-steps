@@ -28,7 +28,7 @@ const stepsSection = document.querySelector('.production-steps');
 function ckeckWindowSize(){
     const windowInnerWidth = window.innerWidth;
     const windowInnerHeight = window.innerHeight;
-    if (windowInnerWidth < 680 || windowInnerHeight > windowInnerWidth) {
+    if (windowInnerWidth < 680 && windowInnerHeight > windowInnerWidth) {
         stepsSection.classList.add('is-mobile');
     }else {
         stepsSection.classList.remove('is-mobile')
