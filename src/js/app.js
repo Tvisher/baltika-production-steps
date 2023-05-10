@@ -11,7 +11,6 @@ document.addEventListener('click',(e)=>{
         stepModal && stepModal.classList.add('show');
         document.querySelectorAll('.ten-step-svg').forEach(item=>item.classList.remove('anim'));
     }
-
        // Закрытие модально окна
        if((target.closest('.step-modal') && !target.closest('.step-modal__content')) || target.closest('.step-modal__close')){
         const openedModal = document.querySelector('.step-modal.show');
@@ -20,6 +19,17 @@ document.addEventListener('click',(e)=>{
             document.querySelectorAll('.ten-step-svg').forEach(item=>item.classList.add('anim'));
         }
         openedModal && openedModal.classList.remove('show');
-        
     }
-})
+});
+
+
+const stepsSection = document.querySelector('.production-steps');
+
+function ckeckWindowSize(){
+    const windowInnerWidth = window.innerWidth;
+    console.log(windowInnerWidth);
+    windowInnerWidth > 680 ? stepsSection.classList.remove('is-mobile') : stepsSection.classList.add('is-mobile');
+}
+
+ckeckWindowSize();
+window.addEventListener('resize',ckeckWindowSize);

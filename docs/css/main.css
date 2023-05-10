@@ -29833,14 +29833,18 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-.production-steps {
+.production-steps__plug {
+  display: none;
+}
+
+.production-steps__wrapper {
   position: relative;
   height: 0;
   width: 100%;
   padding-top: 59.4%;
 }
 
-.production-steps .production-steps__inner {
+.production-steps__wrapper .production-steps__inner {
   position: absolute;
   overflow: hidden;
   left: 0;
@@ -29849,24 +29853,24 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 
-.production-steps .production-steps__svg {
+.production-steps__wrapper .production-steps__svg {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.production-steps .production-steps__svg svg {
+.production-steps__wrapper .production-steps__svg svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.production-steps .production-step {
+.production-steps__wrapper .production-step {
   position: absolute;
   cursor: pointer;
 }
 
-.production-steps .production-step svg {
+.production-steps__wrapper .production-step svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -29874,81 +29878,81 @@ button.swiper-pagination-bullet {
   will-change: auto;
 }
 
-.production-steps .production-step:hover svg {
+.production-steps__wrapper .production-step:hover svg {
   filter: drop-shadow(0px 1px 21px #ffd900);
 }
 
-.production-steps .production-step[data-step="1"] {
+.production-steps__wrapper .production-step[data-step="1"] {
   top: 19%;
   left: 8.5%;
   width: 6.8%;
   height: 21.14%;
 }
 
-.production-steps .production-step[data-step="2"] {
+.production-steps__wrapper .production-step[data-step="2"] {
   top: 22%;
   left: 18.5%;
   width: 8.9%;
   height: 17.2%;
 }
 
-.production-steps .production-step[data-step="3"] {
+.production-steps__wrapper .production-step[data-step="3"] {
   top: 21.5%;
   left: 30%;
   width: 8.9%;
   height: 17.5%;
 }
 
-.production-steps .production-step[data-step="4"] {
+.production-steps__wrapper .production-step[data-step="4"] {
   top: 23%;
   left: 46%;
   width: 5.15%;
   height: 15.7%;
 }
 
-.production-steps .production-step[data-step="5"] {
+.production-steps__wrapper .production-step[data-step="5"] {
   top: 42.7%;
   left: 51.7%;
   width: 6.2%;
   height: 18.6%;
 }
 
-.production-steps .production-step[data-step="6"] {
+.production-steps__wrapper .production-step[data-step="6"] {
   top: 51%;
   left: 40.3%;
   width: 7.7%;
   height: 13.8%;
 }
 
-.production-steps .production-step[data-step="7"] {
+.production-steps__wrapper .production-step[data-step="7"] {
   top: 51%;
   left: 31.9%;
   width: 3.65%;
   height: 15.8%;
 }
 
-.production-steps .production-step[data-step="8"] {
+.production-steps__wrapper .production-step[data-step="8"] {
   top: 50%;
   left: 23.4%;
   width: 4.52%;
   height: 8.24%;
 }
 
-.production-steps .production-step[data-step="9"] {
+.production-steps__wrapper .production-step[data-step="9"] {
   top: 57.3%;
   left: 8.2%;
   width: 11.85%;
   height: 15.9%;
 }
 
-.production-steps .production-step[data-step="10"] {
+.production-steps__wrapper .production-step[data-step="10"] {
   top: 25%;
   left: 66.3%;
   width: 24.25%;
   height: 41.7%;
 }
 
-.production-steps .production-text {
+.production-steps__wrapper .production-text {
   position: absolute;
   font-family: "Verdana";
   font-style: normal;
@@ -29960,52 +29964,52 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
 }
 
-.production-steps .production-text[data-text="1"] {
+.production-steps__wrapper .production-text[data-text="1"] {
   left: 4.55%;
   top: 12%;
 }
 
-.production-steps .production-text[data-text="2"] {
+.production-steps__wrapper .production-text[data-text="2"] {
   left: 17%;
   top: 8%;
 }
 
-.production-steps .production-text[data-text="3"] {
+.production-steps__wrapper .production-text[data-text="3"] {
   left: 35%;
   top: 8%;
 }
 
-.production-steps .production-text[data-text="4"] {
+.production-steps__wrapper .production-text[data-text="4"] {
   left: 57%;
   top: 22%;
 }
 
-.production-steps .production-text[data-text="5"] {
+.production-steps__wrapper .production-text[data-text="5"] {
   left: 52.5%;
   top: 62%;
 }
 
-.production-steps .production-text[data-text="6"] {
+.production-steps__wrapper .production-text[data-text="6"] {
   left: 37.7%;
   top: 47.2%;
 }
 
-.production-steps .production-text[data-text="7"] {
+.production-steps__wrapper .production-text[data-text="7"] {
   left: 31%;
   top: 68.5%;
 }
 
-.production-steps .production-text[data-text="8"] {
+.production-steps__wrapper .production-text[data-text="8"] {
   left: 21.5%;
   top: 45%;
 }
 
-.production-steps .production-text[data-text="9"] {
+.production-steps__wrapper .production-text[data-text="9"] {
   left: 4.3%;
   top: 59%;
 }
 
-.production-steps .production-text[data-text="10"] {
+.production-steps__wrapper .production-text[data-text="10"] {
   left: 66.3%;
   top: 52.8%;
 }
@@ -30073,7 +30077,7 @@ button.swiper-pagination-bullet {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  padding: 20px;
+  padding: 25px;
   display: flex;
   position: absolute;
   left: 0;
@@ -30131,6 +30135,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: top;
 }
 
 .step-modal .step-modal__close {
@@ -30155,6 +30160,24 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 8.36784V7.40784C15 4.42784 12.93 3.28784 10.41 4.86784L7.49 6.69784C7.17 6.88784 6.8 6.99784 6.43 6.99784H5C3 6.99784 2 7.99784 2 9.99784V13.9978C2 15.9978 3 16.9978 5 16.9978H7' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M10.41 19.1292C12.93 20.7092 15 19.5592 15 16.5892V12.9492' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M18.81 9.41797C19.71 11.568 19.44 14.078 18 15.998' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M21.1501 7.80078C22.6201 11.2908 22.1801 15.3708 19.8301 18.5008' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M22 2L2 22' stroke='black' stroke-width='1.32024'/%3e%3c/svg%3e ");
+}
+
+.production-steps {
+  padding: 20px 0;
+}
+
+.production-steps.is-mobile .production-steps__plug {
+  display: flex;
+  width: 100%;
+}
+
+.production-steps.is-mobile .production-steps__plug img {
+  width: 100%;
+  height: 100%;
+}
+
+.production-steps.is-mobile .production-steps__wrapper {
+  display: none;
 }
 
 @media (min-width: 330px) {
@@ -32662,6 +32685,28 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 940px) {
   .landing-page .theme-articles .articles-list .item {
     width: 31%;
+  }
+}
+
+@media (max-width: 940px) {
+  .step-modal .step-modal__title {
+    font-size: 2.34vw;
+  }
+
+  .step-modal .step-modal__text {
+    font-size: 1.3vw;
+  }
+
+  .production-steps .production-text {
+    font-size: 1vw;
+  }
+
+  .step-modal .step-modal__content {
+    max-width: 90%;
+  }
+
+  .step-modal .step-modal__image {
+    width: 30%;
   }
 }
 

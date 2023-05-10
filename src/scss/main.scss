@@ -1,10 +1,15 @@
 @import "old.scss";
 
-.production-steps {
+.production-steps__plug {
+  display:none;
+}
+
+.production-steps__wrapper {
   position: relative;
   height: 0;
   width: 100%;
   padding-top: 59.4%;
+
 
   .production-steps__inner {
     position: absolute;
@@ -243,7 +248,7 @@
     opacity: 1;
     visibility: visible;
   }
-  padding: 20px;
+  padding: 25px;
   display: flex;
   position: absolute;
   left: 0;
@@ -290,6 +295,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      object-position: top;
     }
   }
 
@@ -314,5 +320,43 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 8.36784V7.40784C15 4.42784 12.93 3.28784 10.41 4.86784L7.49 6.69784C7.17 6.88784 6.8 6.99784 6.43 6.99784H5C3 6.99784 2 7.99784 2 9.99784V13.9978C2 15.9978 3 16.9978 5 16.9978H7' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M10.41 19.1292C12.93 20.7092 15 19.5592 15 16.5892V12.9492' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M18.81 9.41797C19.71 11.568 19.44 14.078 18 15.998' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M21.1501 7.80078C22.6201 11.2908 22.1801 15.3708 19.8301 18.5008' stroke='black' stroke-width='1.32024'/%3e%3cpath d='M22 2L2 22' stroke='black' stroke-width='1.32024'/%3e%3c/svg%3e ");
+  }
+}
+
+
+@media (max-width: 940px) {
+  .step-modal .step-modal__title {
+    font-size: 2.34vw;
+  }
+  .step-modal .step-modal__text {
+    font-size: 1.3vw;
+
+  }
+  .production-steps .production-text {
+    font-size: 1vw;
+  }
+  .step-modal .step-modal__content {
+    max-width:90%;
+  }
+  .step-modal .step-modal__image {
+    width: 30%;
+  }
+}
+
+
+.production-steps {
+  padding: 20px 0;
+  &.is-mobile {
+    .production-steps__plug {
+      display:flex;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .production-steps__wrapper {
+      display: none;
+    }
   }
 }
