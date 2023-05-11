@@ -9,7 +9,9 @@ document.addEventListener('click',(e)=>{
         const selectedStepId = selectedStep.dataset.step;
         const stepModal = document.querySelector(`[data-step-modal="${selectedStepId}"]`);
         stepModal && stepModal.classList.add('show');
+       setTimeout(() => {
         document.querySelectorAll('.ten-step-svg').forEach(item=>item.classList.remove('anim'));
+       }, 300);
     }
        // Закрытие модально окна
        if((target.closest('.step-modal') && !target.closest('.step-modal__content')) || target.closest('.step-modal__close')){
@@ -37,3 +39,20 @@ function ckeckWindowSize(){
 
 ckeckWindowSize();
 window.addEventListener('resize',ckeckWindowSize);
+
+const hoverElements = document.querySelectorAll('[data-step]');
+const highlightElements = document.querySelectorAll('[data-text]');
+
+hoverElements.forEach((hoverElement) => {
+  hoverElement.addEventListener('mouseover', () => {
+    const step = hoverElement.getAttribute('data-step');
+    const highlightElement = document.querySelector(`[data-text="${step}"]`);
+    highlightElement.classList.add('highlighted-element');
+  });
+
+  hoverElement.addEventListener('mouseout', () => {
+    const step = hoverElement.getAttribute('data-step');
+    const highlightElement = document.querySelector(`[data-text="${step}"]`);
+    highlightElement.classList.remove('highlighted-element');
+  });
+});
