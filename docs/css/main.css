@@ -30129,6 +30129,8 @@ button.swiper-pagination-bullet {
 .step-modal .step-modal__image {
   width: 38%;
   flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .step-modal .step-modal__image img {
