@@ -29963,11 +29963,11 @@ button.swiper-pagination-bullet {
   letter-spacing: -0.03em;
   color: #ffffff;
   text-transform: uppercase;
-  transition: filter 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 .production-steps__wrapper .production-text.highlighted-element {
-  filter: drop-shadow(0px 1px 21px #ffffff) drop-shadow(0px 3px 28px #ffd900);
+  color: #ffd900;
 }
 
 .production-steps__wrapper .production-text[data-text="1"] {
