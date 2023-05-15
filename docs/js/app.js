@@ -14,9 +14,9 @@ document.addEventListener('click', (e) => {
       const modalAudio = stepModal.querySelector('audio');
       modalAudio.play();
     }
-    setTimeout(() => {
-      document.querySelectorAll('.ten-step-svg').forEach(item => item.classList.remove('anim'));
-    }, 300);
+    // setTimeout(() => {
+    //   document.querySelectorAll('.ten-step-svg').forEach(item => item.classList.remove('anim'));
+    // }, 300);
   }
   // Закрытие модально окна
   if ((target.closest('.step-modal') && !target.closest('.step-modal__content')) || target.closest('.step-modal__close')) {
@@ -40,11 +40,11 @@ document.addEventListener('click', (e) => {
 
   if (target.closest('.step-modal__music')) {
     const modalMute = target.closest('.step-modal__music');
-    const modalAudio =modalMute.closest('.step-modal').querySelector('audio');
+    const modalAudio = modalMute.closest('.step-modal').querySelector('audio');
     modalMute.classList.toggle('mute');
     if (modalMute.classList.contains('mute')) {
       modalAudio.volume = 0.0;
-    }else {
+    } else {
       modalAudio.volume = 1.0;
     }
   }

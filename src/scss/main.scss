@@ -140,13 +140,17 @@
       // filter: drop-shadow(0px 1px 21px #ffffff)
       //   drop-shadow(0px 3px 28px #ffd900);
     }
+    span {
+      font-weight: 600;
+      font-size: 11px;
+    }
     &[data-text="1"] {
       left: 4.55%;
       top: 12%;
     }
 
     &[data-text="2"] {
-      left: 17%;
+      left: 19%;
       top: 8%;
     }
 
@@ -161,7 +165,7 @@
     }
 
     &[data-text="5"] {
-      left: 52.5%;
+      left: 52%;
       top: 62%;
     }
 
@@ -186,19 +190,17 @@
     }
 
     &[data-text="10"] {
-      left: 66.3%;
-      top: 52.8%;
+      left: 64%;
+      top: 54%;
     }
   }
 }
 
 .ten-step-svg {
-  transition: transform;
+  will-change: transform;
   position: absolute;
-  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-  &.anim {
-    // transform: translate(-40px, -40px);
-  }
+  // transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+
   img {
     width: 100%;
     height: 100%;
@@ -211,7 +213,7 @@
     top: 68.5%;
     left: 65.5%;
     &.anim {
-      animation: gogoo 6s ease-in-out forwards 0s;
+      animation: gogoo2 6s ease-in-out forwards infinite 0s;
     }
   }
 
@@ -223,7 +225,7 @@
     left: 71.3%;
     transition-duration: 1.8s;
     &.anim {
-      animation: gogoo 6.5s ease-in-out forwards 0s;
+      animation: gogoo3 6s ease-in-out forwards infinite 0s;
     }
   }
 
@@ -234,7 +236,7 @@
     left: 74%;
     transition-duration: 1.4s;
     &.anim {
-      animation: gogoo 5.6s ease-in-out forwards 0s;
+      animation: gogoo1 6s ease-in-out forwards infinite 0s;
     }
   }
 
@@ -244,9 +246,7 @@
     top: 67%;
     left: 76.7%;
     &.anim {
-      // transform: translate(100px, 100px);
-      // opacity: 0;
-      animation: totoo 6s ease-in-out forwards 0s;
+      animation: totoo 6s ease-in-out forwards infinite 0s;
     }
   }
 }
@@ -256,32 +256,49 @@
     transform: translate(0px, 0px);
     opacity: 1;
   }
-  33% {
+  50% {
     transform: translate(100px, 100px);
     opacity: 0;
   }
-  66% {
+  100% {
     transform: translate(0px, 0px);
     opacity: 1;
   }
-  100% {
-    transform: translate(100px, 100px);
-    opacity: 0;
-  }
 }
 
-@keyframes gogoo {
+@keyframes gogoo1 {
   0% {
     transform: translate(0px, 0px);
   }
-  33% {
+  50% {
     transform: translate(-40px, -40px);
-  }
-  66% {
-    transform: translate(0px, 0px);
   }
   100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes gogoo2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  55% {
     transform: translate(-40px, -40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes gogoo3 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    transform: translate(-40px, -40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 
@@ -340,6 +357,7 @@
     font-size: 12px;
     line-height: 154%;
     text-align: justify;
+    color: #012b62;
   }
 
   .step-modal__image {
