@@ -1,27 +1,31 @@
-
-
+const bgMusic = document.querySelector('#background-music');
+const bgMusicBtn = document.querySelector('.background_music');
 
 document.addEventListener('click', (e) => {
   const target = e.target;
+  if (target.closest('.background_music')) {
+    bgMusicBtn.classList.toggle('mute');
+    bgMusicBtn.classList.contains('mute') ? bgMusic.play() : bgMusic.pause();
+  }
+
   // Открытие модально окна конкретного шага
   if (target.closest('.production-step')) {
     const selectedStep = target.closest('.production-step');
     const selectedStepId = selectedStep.dataset.step;
     const stepModal = document.querySelector(`[data-step-modal="${selectedStepId}"]`);
-
+    bgMusic.pause();
     if (stepModal) {
       stepModal.classList.add('show');
       const modalAudio = stepModal.querySelector('audio');
       modalAudio.play();
     }
-    // setTimeout(() => {
-    //   document.querySelectorAll('.ten-step-svg').forEach(item => item.classList.remove('anim'));
-    // }, 300);
   }
+
   // Закрытие модально окна
   if ((target.closest('.step-modal') && !target.closest('.step-modal__content')) || target.closest('.step-modal__close')) {
     const openedModal = document.querySelector('.step-modal.show');
     const modalId = openedModal.dataset.stepModal;
+    bgMusicBtn.classList.contains('mute') ? bgMusic.play() : bgMusic.pause();
     if (modalId == 10) {
       document.querySelectorAll('.ten-step-svg').forEach(item => item.classList.add('anim'));
     }
@@ -48,6 +52,7 @@ document.addEventListener('click', (e) => {
       modalAudio.volume = 1.0;
     }
   }
+
 });
 
 
@@ -104,3 +109,7 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
 });
+
+
+
+
